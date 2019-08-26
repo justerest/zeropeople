@@ -14,14 +14,14 @@
   height: 56px;
   padding: 8px;
   margin: auto;
-  max-width: var(--maxViewport, 1024px);
+  max-width: var(--maxViewport);
 }
 
 .social-link {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .social-networks svg {
     transform: scale(0.7);
   }
