@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 @import './social-networks.css';
-@import './contacts.css';
+@import './concerts.css';
 
 :root {
   --maxViewport: 960px;
@@ -15,6 +15,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--blackColor);
   background-color: #cfcfcf;
 }
@@ -28,17 +30,15 @@ body {
   background: center / auto 100% no-repeat url('./assets/zeropeople.jpg');
 }
 
-.footer {
-  margin-top: 32px;
-  padding: 32px 16px;
-  color: var(--whiteColor);
-  background-color: var(--blackColor);
-}
-
 .container {
   padding: 0 16px;
   max-width: var(--maxViewport);
   margin: auto;
+}
+
+.video {
+  display: block;
+  margin: 48px 0;
 }
 
 svg {
@@ -51,12 +51,52 @@ h1 {
 }
 
 h2 {
+  margin: 48px 0 32px;
   font-weight: 400;
   font-size: 32px;
   line-height: 40px;
   text-transform: uppercase;
 }
 
+h3 {
+  margin: 16px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer {
+  margin-top: 32px;
+  padding: 32px 16px;
+  color: var(--whiteColor);
+  background-color: var(--blackColor);
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -16px;
+}
+
+.footer-grid > * {
+  margin: 16px;
+}
+
 .context {
-  text-align: right;
+  width: 100%;
+  margin-left: auto;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact > a {
+  color: var(--whiteColor);
+}
+
+.contact > a:hover {
+  text-decoration: none;
 }

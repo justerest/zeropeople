@@ -23,6 +23,10 @@ const config: Configuration = {
       minify: { removeComments: true, collapseWhitespace: true, removeAttributeQuotes: true },
     }),
   ],
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
 };
 
 export default config;
