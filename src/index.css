@@ -33,8 +33,9 @@ body {
 }
 
 .header {
-  min-height: calc(100vh - 56px - 32px);
+  min-height: calc(100vh - 56px);
   background: center / auto 100% no-repeat url('./assets/zeropeople.jpg');
+  overflow: hidden;
 }
 
 .container {
