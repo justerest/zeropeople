@@ -18,19 +18,38 @@ export class ConcertsCmp extends React.Component {
 
   private getConcertCard({ city, place, date, link }: Concert, i: number): JSX.Element {
     return (
-      <li className='concert-card' key={i}>
+      <a href={link} role='listitem' className='concert-card' key={i}>
         <div className='concert-date'>
           <span>{this.getDate(date)}</span>
         </div>
-        <h3 className='concert-city'>{city}</h3>
-        <p className='concert-place'>{place}</p>
-        <a href={link} className='concert-link'></a>
-      </li>
+        <div className='concert-body'>
+          <h3 className='concert-city'>{city}</h3>
+          <p className='concert-place'>{place}</p>
+        </div>
+      </a>
     );
   }
 
   private getConcertList(): Concert[] {
     return [
+      {
+        city: 'Санк-Петербург',
+        date: new Date(),
+        place: 'Tochka',
+        link: 'http://zeropeople.ru',
+      },
+      {
+        city: 'Москва',
+        date: new Date(),
+        place: 'Luzhniki',
+        link: 'http://zeropeople.ru',
+      },
+      {
+        city: 'Ekaterinburg',
+        date: new Date(),
+        place: 'Tochka',
+        link: 'http://zeropeople.ru',
+      },
       {
         city: 'Санк-Петербург',
         date: new Date(),
