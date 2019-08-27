@@ -19,7 +19,7 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-      inject: true,
+      inject: false,
       minify: { removeComments: true, collapseWhitespace: true, removeAttributeQuotes: true },
     }),
   ],

@@ -8,7 +8,7 @@
 }
 
 .concert-card {
-  position: relative;
+  display: block;
   padding: 16px;
   background-color: var(--whiteColor);
   border-radius: 4px;
@@ -16,23 +16,14 @@
   transition: box-shadow 0.2s;
 }
 
-a.concert-card {
-  color: unset;
-  text-decoration: unset;
-}
-
 .concert-card:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px;
   z-index: 2;
 }
 
-.concert-link {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+a.concert-card {
+  color: unset;
+  text-decoration: unset;
 }
 
 .concert-date {
@@ -59,16 +50,24 @@ a.concert-card {
   }
 
   .concert-card {
-    transition: all 0.2s;
-  }
-
-  .concert-card:hover {
-    margin: 4px 0;
-  }
-
-  .concert-card {
     display: flex;
     border-radius: 0;
+  }
+
+  .concert-list-item {
+    transition: padding 0.2s;
+  }
+
+  .concert-list-item:hover {
+    padding: 8px 0;
+  }
+
+  .concert-list-item:hover:first-child {
+    padding-top: 0;
+  }
+
+  .concert-list-item:hover:last-child {
+    padding-bottom: 0;
   }
 
   .concert-date {

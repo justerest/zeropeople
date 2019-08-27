@@ -18,15 +18,17 @@ export class ConcertsCmp extends React.Component {
 
   private getConcertCard({ city, place, date, link }: Concert, i: number): JSX.Element {
     return (
-      <a href={link} role='listitem' className='concert-card' key={i}>
-        <div className='concert-date'>
-          <span>{this.getDate(date)}</span>
-        </div>
-        <div className='concert-body'>
-          <h3 className='concert-city'>{city}</h3>
-          <p className='concert-place'>{place}</p>
-        </div>
-      </a>
+      <li key={i} className='concert-list-item'>
+        <a className='concert-card' href={link}>
+          <div className='concert-date'>
+            <span>{this.getDate(date)}</span>
+          </div>
+          <div className='concert-body'>
+            <h3 className='concert-city'>{city}</h3>
+            <p className='concert-place'>{place}</p>
+          </div>
+        </a>
+      </li>
     );
   }
 
@@ -80,6 +82,7 @@ export class ConcertsCmp extends React.Component {
   private getDate(date: Date): string {
     return Intl.DateTimeFormat(void 0, { day: 'numeric', month: 'short' })
       .format(date)
-      .replace(/\.$/, '');
+      .replace(/\.$/, '')
+      .padStart(6);
   }
 }
